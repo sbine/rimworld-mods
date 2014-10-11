@@ -22,7 +22,7 @@
       <MaxHealth>150</MaxHealth>
       <WorkToBuild>580</WorkToBuild>
       <Flammability>1.0</Flammability>
-      <Beauty>15</Beauty>
+      <Beauty>30</Beauty>
       <BedRestEffectiveness>0.5</BedRestEffectiveness>
     </statBases>
     <Description>Put your feet up. Rest effectiveness: 5/10</Description>
