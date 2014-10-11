@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Buildings>
+
+
+	<ThingDef Name="BuildingBase" Abstract="True">
+		<category>Building</category>
+    <thingClass>Building</thingClass>
+    <soundImpactDefault>BulletImpactMetal</soundImpactDefault>
+		<selectable>true</selectable>
+		<drawerType>MapMeshAndRealTime</drawerType>
+		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+		<repairEffect>Repair</repairEffect>
+	</ThingDef>
+
+  <ThingDef ParentName="BuildingBase">
+    <defName>Sofa</defName>
+    <eType>Building_Chair</eType>
+    <label>sofa</label>
+    <graphicPathMulti>Things/Building/Furniture/Sofa</graphicPathMulti>
+    <altitudeLayer>Waist</altitudeLayer>
+    <statBases>
+      <MaxHealth>150</MaxHealth>
+      <WorkToBuild>580</WorkToBuild>
+      <Flammability>1.0</Flammability>
+      <Beauty>15</Beauty>
+      <BedRestEffectiveness>0.5</BedRestEffectiveness>
+    </statBases>
+    <Description>Put your feet up. Rest effectiveness: 5/10</Description>
+    <size>(2,1)</size>
+    <building>
+      <Bed_ShowSleeperBody>False</Bed_ShowSleeperBody>
+      <Bed_HealTickInterval>2500</Bed_HealTickInterval>
+    </building>
+    <Overdraw>True</Overdraw>
+    <madeFromStuff>true</madeFromStuff>
+    <costStuffCount>25</costStuffCount>
+    <LeaveResourcesWhenKilled>True</LeaveResourcesWhenKilled>
+    <killedLeavings>
+      <ChunkSlag>1</ChunkSlag>
+    </killedLeavings>
+    <fillPercent>0.4</fillPercent>
+    <pathCost>60</pathCost>
+    <designationCategory>Furniture</designationCategory>
+    <StaticSunShadowHeight>0.17</StaticSunShadowHeight>
+    <CastEdgeShadows>True</CastEdgeShadows>
+    <Passability>PassThroughOnly</Passability>
+  </ThingDef>
+</Buildings>
