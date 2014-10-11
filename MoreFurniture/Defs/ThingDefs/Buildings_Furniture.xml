@@ -2,15 +2,15 @@
 <Buildings>
 
 
-	<ThingDef Name="BuildingBase" Abstract="True">
-		<category>Building</category>
+  <ThingDef Name="BuildingBase" Abstract="True">
+    <category>Building</category>
     <thingClass>Building</thingClass>
     <soundImpactDefault>BulletImpactMetal</soundImpactDefault>
-		<selectable>true</selectable>
-		<drawerType>MapMeshAndRealTime</drawerType>
-		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
-		<repairEffect>Repair</repairEffect>
-	</ThingDef>
+    <selectable>true</selectable>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <repairEffect>Repair</repairEffect>
+  </ThingDef>
 
   <ThingDef ParentName="BuildingBase">
     <defName>Sofa</defName>
@@ -25,16 +25,16 @@
       <Beauty>30</Beauty>
       <BedRestEffectiveness>0.5</BedRestEffectiveness>
     </statBases>
-    <Description>Put your feet up. Rest effectiveness: 5/10</Description>
+    <description>Eat in comfort! Rest effectiveness: 5/10</description>
     <size>(2,1)</size>
     <building>
       <Bed_ShowSleeperBody>False</Bed_ShowSleeperBody>
       <Bed_HealTickInterval>2500</Bed_HealTickInterval>
     </building>
-    <Overdraw>True</Overdraw>
+    <overdraw>True</overdraw>
     <madeFromStuff>true</madeFromStuff>
     <costStuffCount>25</costStuffCount>
-    <LeaveResourcesWhenKilled>True</LeaveResourcesWhenKilled>
+    <leaveResourcesWhenKilled>True</leaveResourcesWhenKilled>
     <killedLeavings>
       <ChunkSlag>1</ChunkSlag>
     </killedLeavings>
@@ -43,6 +43,73 @@
     <designationCategory>Furniture</designationCategory>
     <StaticSunShadowHeight>0.17</StaticSunShadowHeight>
     <CastEdgeShadows>True</CastEdgeShadows>
-    <Passability>PassThroughOnly</Passability>
   </ThingDef>
+
+  <ThingDef Abstract="True" ParentName="BuildingBase" Name="TableBase">
+    <eType>Building_Table</eType>
+    <thingClass>Building</thingClass>
+    <altitudeLayer>Waist</altitudeLayer>
+    <description>People eat off tables when chairs are placed facing them.</description>
+    <overdraw>false</overdraw>
+    <passability>PassThroughOnly</passability>
+    <castEdgeShadows>true</castEdgeShadows>
+    <pathCost>60</pathCost>
+    <fillPercent>0.4</fillPercent>
+    <madeFromStuff>true</madeFromStuff>
+    <filthLeavings>
+      <SlagRubble>1</SlagRubble>
+    </filthLeavings>
+    <leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+    <designationCategory>Furniture</designationCategory>
+    <staticSunShadowHeight>0.20</staticSunShadowHeight>
+    <itemSurface>true</itemSurface>
+    <comps>
+      <li>
+        <compClass>CompGatherSpot</compClass>
+      </li>
+    </comps>
+  </ThingDef>
+
+
+  <ThingDef ParentName="TableBase">
+    <defName>TableCoffee</defName>
+    <label>coffee table</label>
+    <graphicPathMulti>Things/Building/Furniture/CoffeeTable</graphicPathMulti>
+    <description>Put your feet up.</description>
+    <overdraw>true</overdraw>
+    <statBases>
+      <MaxHealth>100</MaxHealth>
+      <WorkToBuild>350</WorkToBuild>
+      <Flammability>1.0</Flammability>
+      <Beauty>8</Beauty>
+    </statBases>
+    <size>(2,1)</size>
+    <madeFromStuff>true</madeFromStuff>
+    <costStuffCount>15</costStuffCount>
+    <killedLeavings>
+      <ChunkSlag>1</ChunkSlag>
+    </killedLeavings>
+  </ThingDef>
+
+  <ThingDef ParentName="TableBase">
+    <defName>TableEnd</defName>
+    <label>end table</label>
+    <graphicPathSingle>Things/Building/Furniture/EndTable</graphicPathSingle>
+    <description>A 1x1 table for all of your corner needs.</description>
+    <overdraw>true</overdraw>
+    <statBases>
+      <MaxHealth>100</MaxHealth>
+      <WorkToBuild>450</WorkToBuild>
+      <Flammability>1.0</Flammability>
+      <Beauty>5</Beauty>
+    </statBases>
+    <size>(1,1)</size>
+    <madeFromStuff>true</madeFromStuff>
+    <costStuffCount>10</costStuffCount>
+    <rotatable>false</rotatable>
+    <killedLeavings>
+      <ChunkSlag>1</ChunkSlag>
+    </killedLeavings>
+  </ThingDef>
+
 </Buildings>
