@@ -16,11 +16,12 @@
     <defName>Sofa</defName>
     <eType>Building_Chair</eType>
     <label>sofa</label>
-    <graphicPathMulti>Things/Building/Furniture/Sofa</graphicPathMulti>
+    <graphicPath>Things/Building/Furniture/Sofa</graphicPath>
+    <graphicClass>Graphic_Multi</graphicClass>
     <altitudeLayer>Waist</altitudeLayer>
     <statBases>
       <MaxHealth>150</MaxHealth>
-      <WorkToBuild>580</WorkToBuild>
+      <WorkToMake>580</WorkToMake>
       <Flammability>1.0</Flammability>
       <Beauty>30</Beauty>
       <BedRestEffectiveness>0.5</BedRestEffectiveness>
@@ -31,8 +32,12 @@
       <Bed_ShowSleeperBody>False</Bed_ShowSleeperBody>
       <Bed_HealTickInterval>2500</Bed_HealTickInterval>
     </building>
-    <overdraw>True</overdraw>
-    <madeFromStuff>true</madeFromStuff>
+    <graphicOverdraw>True</graphicOverdraw>
+    <stuffCategories>
+      <li>Metallic</li>
+      <li>Woody</li>
+      <li>Stony</li>
+    </stuffCategories>
     <costStuffCount>25</costStuffCount>
     <leaveResourcesWhenKilled>True</leaveResourcesWhenKilled>
     <killedLeavings>
@@ -50,12 +55,16 @@
     <thingClass>Building</thingClass>
     <altitudeLayer>Waist</altitudeLayer>
     <description>People eat off tables when chairs are placed facing them.</description>
-    <overdraw>false</overdraw>
+    <graphicOverdraw>false</graphicOverdraw>
     <passability>PassThroughOnly</passability>
     <castEdgeShadows>true</castEdgeShadows>
     <pathCost>60</pathCost>
     <fillPercent>0.4</fillPercent>
-    <madeFromStuff>true</madeFromStuff>
+    <stuffCategories>
+      <li>Metallic</li>
+      <li>Woody</li>
+      <li>Stony</li>
+    </stuffCategories>
     <filthLeavings>
       <SlagRubble>1</SlagRubble>
     </filthLeavings>
@@ -74,17 +83,22 @@
   <ThingDef ParentName="TableBase">
     <defName>TableCoffee</defName>
     <label>coffee table</label>
-    <graphicPathMulti>Things/Building/Furniture/CoffeeTable</graphicPathMulti>
+    <graphicPath>Things/Building/Furniture/CoffeeTable</graphicPath>
+    <graphicClass>Graphic_Multi</graphicClass>
     <description>Put your feet up.</description>
-    <overdraw>true</overdraw>
+    <graphicOverdraw>true</graphicOverdraw>
     <statBases>
       <MaxHealth>100</MaxHealth>
-      <WorkToBuild>350</WorkToBuild>
+      <WorkToMake>350</WorkToMake>
       <Flammability>1.0</Flammability>
       <Beauty>8</Beauty>
     </statBases>
     <size>(2,1)</size>
-    <madeFromStuff>true</madeFromStuff>
+    <stuffCategories>
+      <li>Metallic</li>
+      <li>Woody</li>
+      <li>Stony</li>
+    </stuffCategories>
     <costStuffCount>15</costStuffCount>
     <killedLeavings>
       <ChunkSlag>1</ChunkSlag>
@@ -94,17 +108,22 @@
   <ThingDef ParentName="TableBase">
     <defName>TableEnd</defName>
     <label>end table</label>
-    <graphicPathSingle>Things/Building/Furniture/EndTable</graphicPathSingle>
+    <graphicPath>Things/Building/Furniture/EndTable</graphicPath>
+    <graphicClass>Graphic_Single</graphicClass>
     <description>A 1x1 table for all of your corner needs.</description>
-    <overdraw>true</overdraw>
+    <graphicOverdraw>true</graphicOverdraw>
     <statBases>
       <MaxHealth>100</MaxHealth>
-      <WorkToBuild>450</WorkToBuild>
+      <WorkToMake>450</WorkToMake>
       <Flammability>1.0</Flammability>
       <Beauty>5</Beauty>
     </statBases>
     <size>(1,1)</size>
-    <madeFromStuff>true</madeFromStuff>
+    <stuffCategories>
+      <li>Metallic</li>
+      <li>Woody</li>
+      <li>Stony</li>
+    </stuffCategories>
     <costStuffCount>10</costStuffCount>
     <rotatable>false</rotatable>
     <killedLeavings>
